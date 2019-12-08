@@ -1,0 +1,68 @@
+<div style="padding-left: 5%; padding-right: 5%;" ng-controller="productoController">
+        <div class="row titulo">
+        <p>ADMINISTRACION DE MI SEDE</p>
+    </div>
+    <div class="row" ng-controller="promoController">
+        <div class="col m5 l5 s12" style="margin-bottom: 15px;">
+            <form>
+             <fieldset style="padding: 70px 23px;height: 411px;">
+              <legend>&nbsp; &nbsp; &nbsp;AÑADIR NUEVO SERVICIO&nbsp; &nbsp; &nbsp;</legend>
+                 <div class="input-field">
+                  <input id="txtNombreProduct" type="text">
+                  <label for="txtNombreProduct">Nombre del servicio </label>
+                </div>
+                <div class="input-field" style="width: 50%">
+                      <input id="txtPrecio" type="text" >
+                      <label for="txtPrecio" style="left: 0rem;">Precio </label>
+                </div>
+                <div class="row" style="text-align: center;padding-top: 15px">
+                    <a class="waves-effect waves-light btn modal-trigger">AÑADIR SERVICIO</a>
+                </div>
+             </fieldset>
+            </form>
+        </div>
+        <div class="col m7 l7 s12">
+           <form>
+                <fieldset style="height: 411px;">
+                  <legend>&nbsp; &nbsp; &nbsp;MIS SERVICIOS&nbsp; &nbsp; &nbsp;</legend>
+                     <div class="row" style="text-align: center; padding: 15px 0px">
+                       <div class="col m6" style="text-align: center;padding-bottom: 15px" >
+                           <a class="waves-effect waves-light btn modal-trigger">MODIFICAR SERVICIO</a>
+                       </div>
+                       <div class="col m6" style="text-align: center;">
+                           <a class="waves-effect waves-light btn modal-trigger">DESHABILITAR SERVICIO</a>
+                       </div>
+                    </div>
+                     <table id="getproductos" class="table table-responsive" style="width:100%">
+                    <thead style="text-align:center">
+                    <tr>
+                        <th>N°</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Pastilla dolor</td>
+                        <td>20</td>
+                       </tr>
+                       <tr>
+                        <td>1</td>
+                        <td>Pastilla dolor</td>
+                        <td>20</td>
+                       </tr>
+                    </tbody>
+                </table>
+                </fieldset>               
+           </form>
+        </div>        
+    </div>
+    <div class="row" >
+        <div style="text-align: right;">
+            <a class="waves-effect waves-light btn modal-trigger" ng-click="irProductos()">IR A PRODUCTOS</a>
+        </div>
+    </div> 
+   
+
+</div>

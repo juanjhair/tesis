@@ -1,0 +1,75 @@
+<div ng-controller="sedeController">
+    <!-- <div class="row fondoBanner">
+        <h1>DATOS DE MI SEDE</h1>
+        <p>aksjd hakehda ehdkj haekdjheakj dhak ejdhaekd haekd haekjhfk eheka hfkahfka jehkj h daekh dkaehdkaehd kjaedk jhaekjdh aekj dhkjaeh dad kajhekfh ae khfb gkahfah k</p>
+    </div> -->
+    <div class="row titulo">
+        <p>DATOS DE MI SEDE</p>
+    </div>
+    <div class="row">
+        <div class="col m7 l7 offset-l2 offset-m2 s8 offset-s2">
+            <div class="row">
+                <div class="col m4 l4 s12"><p class="">VETERINARIA:</p> </div>
+                <div class="col m6 l6 s12">
+                    <input id="txtVeterinaria" type="text" placeholder="Ingrese Veterinaria" disabled="" ng-model="txtVeterinariaIni">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m4 l4 etiqueta s12"><p class="">NOMBRE DE LA SEDE:</p> </div>
+                <div class="col m6 l6 s12">
+                    <input id="txtSede" type="text" placeholder="Ingrese Sede" disabled="" ng-model="txtSedeIni">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m4 l4 etiqueta s12"><p class="">UBICACIÓN:</p> </div>
+                <div class="col m6 l6 s10">
+                    <input id="txtUbicacion" type="text" placeholder="Ingrese ubicación de la sede" class="validate">
+                </div>
+                <div class="col m2 l2 s2"><a class="waves-effect waves-light btn-large btnUbi modal-trigger" href="#modalMapSede"><i class="material-icons">location_on</i></a></div>
+            </div>
+            <div class="row">
+                <div class="col m4 l4 etiqueta s12"><p class="">HORARIO DE ATENCIÓN:</p> </div>
+                <div class="col m6 l6 s12">
+                    <div class="col s5">
+                        <input  id="cmbHoraIni" type="number" class="validate">
+                    </div>
+                    <div class="col s2" style="text-align: center;"><p> - </p></div>
+                    <div class="col s5">
+                        <input  id="cmbHoraFin" type="number" class="validate">
+                    </div>
+                    <!-- <div class="col s3">
+                        <a class="waves-effect waves-light btn-large btnUbi"><i class="material-icons">date_range</i></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="col m2 l2 s8 offset-s2" style="text-align: center; padding-top:20px;">
+            <a class="waves-effect waves-light btn-large amber darken-1 btnModDatos" ng-click="">Guardar</a>
+        </div>
+    </div>
+    
+    <!-- modal ver mapa - datos de la Sede -->
+<div id="modalMapSede" class="modal">
+    <div class="modal-content sinPadding">
+       <!-- Barra de titulo -->
+        <div class="row" style="margin-top:5px; margin-bottom: 5px;">
+            <div class="col s10">
+                <div class="titulo"><p class="sinMargin">Añadir ubicación</p></div>
+                <div class="divider"></div>
+            </div>
+            <div class="col s2" style="text-align: right;">
+                  <a class="btn-floating btn-mini waves-effect waves-light red modal-close"><i class="material-icons cerrar">close</i></a>                
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0px; width: 100%">
+            <div>
+                //Colocar aca el mapa
+            </div>
+        </div>
+        <div class="row rowSinEspacioAbajo" style="text-align: center;margin-bottom: 30px;margin-top:20px;">
+              <a class="waves-effect waves-light btn">Añadir</a>
+        </div>
+    </div>
+</div>
+    </div>
+    
