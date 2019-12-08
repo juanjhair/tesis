@@ -1,18 +1,5 @@
 var bar=app.controller('promoController', function($scope){
   angular.element(document).ready(function () {
-        $('.modal').modal({
-                dismissible: false, // Modal can be dismissed by clicking outside of the modal
-                opacity: .7, // Opacity of modal background
-                inDuration: 300, // Transition in duration
-                outDuration: 200, // Transition out duration
-                startingTop: '4%', // Starting top style attribute
-                endingTop: '10%', // Ending top style attribute
-                ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-                    // alert("Ready");
-                    //console.log(modal, trigger);
-                },
-                complete: function () { /*alert('Closed');*/ } // Callback for Modal close
-            });
 		$('.datepicker').datepicker({
                 firstDay: true, 
                 format: 'dd/mm/yyyy',
@@ -32,12 +19,7 @@ var bar=app.controller('promoController', function($scope){
 });
 
 var bar=app.controller('productoController', function($scope){
-   angular.element(document).ready(function () {
-        var table = $('#getproductos');
-        table.DataTable({scrollY: "220px",scrollCollapse: true, paging: false, columnDefs: [{ "orderable": false, "targets": [0],className: "removeClass", "targets": [0] }]});
-        $("#getproductos_filter").hide();
-        $("#getproductos_info").hide();
-    });
+
 });
 
 var bar=app.controller('barraController', function($scope){
@@ -45,9 +27,33 @@ var bar=app.controller('barraController', function($scope){
         $('.sidenav').sidenav();
     });
 });
-
+var bar=app.controller('comparadorController', function($scope){
+   angular.element(document).ready(function () {
+       var table = $('#getproductoprecio');
+        
+       $('.modal').modal({
+                dismissible: false, // Modal can be dismissed by clicking outside of the modal
+                opacity: .7, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+      
+             outDuration: 200, // Transition out duration
+                startingTop: '4%', // Starting top style attribute
+                endingTop: '10%', // Ending top style attribute
+                preventScrolling: true,
+                ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+                    // alert("Ready");
+                    //console.log(modal, trigger);
+                },
+                complete: function () { /*alert('Closed');*/ } // Callback for Modal close
+            });
+    });
+    $scope.fu_obtieneFiltro = function(){
+        $scope.txtFiltroComp = $scope.txtOpcProducto;
+    }
+});
 var bar=app.controller('sedeController', function($scope){
    angular.element(document).ready(function () {
+       $('.timepicker').timepicker();
         $('.modal').modal({
                 dismissible: false, // Modal can be dismissed by clicking outside of the modal
                 opacity: .7, // Opacity of modal background
@@ -65,10 +71,23 @@ var bar=app.controller('sedeController', function($scope){
 
 var bar=app.controller('campanhaController', function($scope){
    angular.element(document).ready(function () {
-       var table = $('#getcampanas');
-        table.DataTable({scrollY: "220px",scrollCollapse: true, paging: false, columnDefs: [{ "orderable": false, "targets": [0],className: "removeClass", "targets": [0] }]});
-        $("#getcampanas_filter").hide();
-        $("#getcampanas_info").hide();
+         $('.modal').modal({
+                dismissible: false, // Modal can be dismissed by clicking outside of the modal
+                opacity: .7, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+      
+             outDuration: 200, // Transition out duration
+                startingTop: '4%', // Starting top style attribute
+                endingTop: '10%', // Ending top style attribute
+                preventScrolling: true,
+                ready: function (modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+                    // alert("Ready");
+                    //console.log(modal, trigger);
+                },
+                complete: function () { /*alert('Closed');*/ } // Callback for Modal close
+            });
+       
+       
     });
     });
 
@@ -116,11 +135,17 @@ var controlador = app.controller('MyController',function($scope,$http){
 });
 var controlador = app.controller('MyController2',function($scope,$http){                                 
     $scope.mostrarBarraDueno=true;
-    $scope.mostrarCampanaEsteril=false;
+    $scope.mostrarCampanaEsteril=false;     $scope.mostrarComparadorPrecio=false;
     
     $scope.irCampanaEster = function(){
         $scope.mostrarBarraDueno=true;
         $scope.mostrarCampanaEsteril=true;
+        $scope.mostrarComparadorPrecio=false;
+    }
+    $scope.irComparadorPrecio = function(){
+        $scope.mostrarBarraDueno=true;
+        $scope.mostrarCampanaEsteril=false;
+        $scope.mostrarComparadorPrecio=true;
     }
     
     // CONFIGURACION DE CONEXION

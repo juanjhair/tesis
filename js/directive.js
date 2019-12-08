@@ -1,6 +1,6 @@
 //Se crean directivas del modulo angular asignado a la variable js (app)
 //Estas directivas, en este caso son para reemplazar determinadas etiquetas de html con el archivo html de las pantallas
-app.directive('barraVeterinaria',function () { //Si se crea la directiva con el nombre 'barraPrincipal', entonces la etiqueta html que se usará será
+app.directive('barraPrincipal',function () { //Si se crea la directiva con el nombre 'barraPrincipal', entonces la etiqueta html que se usará será
                                             // <barra-principal> que será colocada en el index.html
     return{
         restrict:'E',
@@ -10,12 +10,14 @@ app.directive('barraVeterinaria',function () { //Si se crea la directiva con el 
     //se ingresa la ubicación del archivo html que será reemplazado en la etiqueta html de arriba
 });
 
-app.directive('dueno',function () { 
-                                            
+app.directive('barraPrincipal2',function () { //Si se crea la directiva con el nombre 'barraPrincipal', entonces la etiqueta html que se usará será
+                                            // <barra-principal> que será colocada en el index.html
     return{
         restrict:'E',
         templateUrl:'pantallas/barraPrincipal2.html'
     }
+    //esta restricción indica que son templates creo xddd
+    //se ingresa la ubicación del archivo html que será reemplazado en la etiqueta html de arriba
 });
 
 app.directive('datosSede',function () { 
@@ -53,4 +55,11 @@ app.directive('servicios',function () {
     }
 });
 
+
+app.directive('comparadorPrecio',function () {
+    return{
+        restrict:'E',
+        templateUrl:'pantallas/comparadorPrecio.html'
+    }
+});
 

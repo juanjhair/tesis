@@ -243,3 +243,9 @@ a.article:hover {
     line-height: 21px !important;
     font-size: 19px !important;
 }
+
+.tbres{
+    overflow-y: scroll;
+    height: 450px;
+    width: auto;
+}

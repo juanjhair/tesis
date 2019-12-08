@@ -1,104 +1,104 @@
-<div ng-controller="campanhaController" style="padding-left:5%; padding-right: 5%;">
+<div ng-controller="comparadorController" style="padding-left: 5%; padding-right: 5%;">
     <div class="row titulo">
-        <p>CAMPAÑAS DE ESTERILIZACIÓN</p>
+        <p>COMPARADOR DE PRECIOS</p>
     </div>
     <div class="row">
-        <div class="col m3 l3 s12 offset-m3 offset-l3" style="text-align: center;margin-bottom: 5px;">
-            <a class="waves-effect waves-light btn modal-trigger" data-target="modalMapEst">Ver Mapa</a>
+        <div class="col m7 offset-m1 l7 offset-l1 s12">
+            <form>
+             <fieldset>
+               <div class="col m7 l7 s12">
+                   <div class="input-field">
+                      <input id="txtOpcProducto" ng-model="txtOpcProducto" type="text">
+                    <label for="txtOpcProducto">Producto: </label>
+                    </div>
+               </div>
+               <div class="col m5 l5 s12" style="text-align: center; vertical-align: middle;padding-top:15px;">
+                    <a class="waves-effect waves-light btn modal-trigger" data-target="modalFiltroComp"><i class="fas fa-plus"></i> Filtros</a>
+               </div>
+             </fieldset>
+            </form>
         </div>
-        <div class="col m3 l3 s12" style="text-align: center;">
-            <a class="waves-effect waves-light btn modal-trigger" data-target="modalFiltroEst">Filtro <i class="fas fa-filter"></i></a>
+        <div class="col m3 l3 s12" style="padding-top: 20px;text-align: center;">
+            <a class="waves-effect waves-light btn modal-trigger" data-target="modalMapComp" ng-click="fu_obtieneFiltro()">Ver Mapa</a>
         </div>
     </div>
     <div class="row tbres">
-        <table class="table table-responsive">
-            <thead>
-              <tr>
-                  <th>N°</th>
-                  <th>Campaña</th>
-                  <th>Precio</th>
-                  <th>Inicio</th>
-                  <th>Fin</th>
-                  <th>Veterinaria</th>
-                  <th>Distrito</th>
-              </tr>
+        <table id="getproductoprecio" class="table table-responsive" style="width:100%">
+            <thead style="text-align:center">
+            <tr>
+                <th>N°</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Veterinaria</th>
+                <th>Distrito</th>
+            </tr>
             </thead>
-
             <tbody>
               <tr>
                 <td>1</td>
                 <td>Esterilización hembra</td>
                 <td>20</td>
-                <td>13/11/19</td>
-                <td>13/12/19</td>
                 <td>Voz animal</td>
                 <td>Comas</td>
-              </tr>
-              <tr>
+               </tr>
+               <tr>
                 <td>2</td>
                 <td>Esterilización macho</td>
                 <td>21</td>
-                <td>13/11/19</td>
-                <td>13/12/19</td>
                 <td>Voz animal</td>
                 <td>Comas</td>
-              </tr>
-              <tr>
+               </tr>
+               <tr>
                 <td>3</td>
                 <td>Esterilización macho</td>
                 <td>30</td>
-                <td>13/11/19</td>
-                <td>13/12/19</td>
                 <td>Voz animal</td>
                 <td>Los Olivos</td>
-              </tr>
-              <tr>
+               </tr>
+               <tr>
                 <td>4</td>
                 <td>Esterilización hembra</td>
                 <td>25</td>
-                <td>13/11/19</td>
-                <td>13/12/19</td>
                 <td>Voz animal</td>
                 <td>Los Olivos</td>
-              </tr>
-              <tr>
+               </tr>
+               <tr>
                 <td>5</td>
                 <td>Esterilización macho</td>
                 <td>22</td>
-                <td>13/11/19</td>
-                <td>13/12/19</td>
                 <td>Voz animal</td>
                 <td>Ate</td>
-              </tr>
+               </tr>
             </tbody>
-      </table>
+        </table>
     </div>
-</div>
-
-
-<!-- modal ver mapa - Campañas de esterilización -->
-<div id="modalMapEst" class="modal">
-    <div class="modal-content sinPadding">
-       <!-- Barra de titulo -->
-        <div class="row" style="margin-top:5px; margin-bottom: 5px;">
-            <div class="col s10">
-                <div class="titulo"><p class="sinMargin">Campañas de Esterilización</p></div>
-                <div class="divider"></div>
+    <!-- modal ver mapa - Campañas de esterilización -->
+    <div id="modalMapComp" class="modal">
+        <div class="modal-content sinPadding">
+           <!-- Barra de titulo -->
+            <div class="row" style="margin-top:5px; margin-bottom: 5px;">
+                <div class="col s10">
+                    <div class="titulo"><p class="sinMargin">Comparador de Precios</p></div>
+                    <div class="divider"></div>
+                </div>
+                <div class="col s2" style="text-align: right;">
+                      <a class="btn-floating btn-mini waves-effect waves-light red modal-close"><i class="material-icons cerrar">close</i></a>                
+                </div>
             </div>
-            <div class="col s2" style="text-align: right;">
-                  <a class="btn-floating btn-mini waves-effect waves-light red modal-close"><i class="material-icons cerrar">close</i></a>                
+            <div class="row">
+                <div class="col s6 offset-s3">
+                    <input id="txtFiltroComp" type="text" disabled="" ng-model="txtFiltroComp">
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 0px; width:100%;">
+                <div>
+                    //Colocar aca el mapa :D
+                </div>
             </div>
         </div>
-        <div class="row" style="margin-bottom: 0px; width:100%;">
-            <div>
-                //Colocar aca el mapa :D
-            </div>
-        </div>
     </div>
-</div>
-
 <!-- modal filtros - Campañas de esterilización -->
-<div id="modalFiltroEst" class="modal">
+<div id="modalFiltroComp" class="modal">
     <div class="modal-content sinPadding">
        <!-- Barra de titulo -->
         <div class="row" style="margin-top:5px; margin-bottom: 5px;">
@@ -117,13 +117,13 @@
                 <div class="input-field">
                      <select id="cmbDistrito" class="waves-effect waves-light">
                             <option value="-1">Elegir ubicacion</option>
-                            <option value="1">Ubicacion Actual</option>
+                            <option value="1">Ubicacion actual</option>
                             <option value="2">Ubicacion 2</option>
                             <option value="3">Ubicacion 3</option>
                             <option value="4">Ubicacion 4</option>
                             <option value="5">Ubicacion 5</option>
                         </select>
-                      <label for="cmbDistrito" class="active">Mis ubicaciones: </label>
+                      <label for="cmbDistrito" class="active">Mis ubicacion: </label>
                 </div>
             </div>
         </div>
@@ -162,4 +162,5 @@
               <a class="waves-effect waves-light btn">Aplicar</a>
         </div>
     </div>
+</div>
 </div>

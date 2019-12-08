@@ -7,7 +7,6 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="recursos/materialize/css/materialize.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="recursos/css/style.css"  media="screen,projection"/>
-      <link rel="stylesheet" type="text/css" href="recursos/datatables/DataTables-1.10.18/css/jquery.dataTables.min.css"/>
       
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,7 +15,7 @@
 <body ng-app="aplicacion">
 
   <div ng-controller="MyController">
-      <barra-veterinaria ng-if="mostrarBarraVeterinaria"></barra-veterinaria>
+      <barra-principal ng-if="mostrarBarraVeterinaria"></barra-principal>
       <datos-sede ng-if="mostrarDatosSede"></datos-sede>
       <promociones ng-if="mostrarPromociones"></promociones>
       <productos ng-if="mostrarProductos"></productos>
@@ -28,7 +27,6 @@
       <script type="text/javascript" src="recursos/jquery/jquery-3.4.1.js"></script>
       <script type="text/javascript" src="recursos/angularJS/angular-v1.7.8.js"></script>
       <script type="text/javascript" src="recursos/materialize/js/materialize.min.js"></script>
-      <script type="text/javascript" src="recursos/datatables/datatables.min.js"></script>
       <script src="js/app.js" ></script>
       <script src="js/directive.js" ></script>
       <script src="js/controller.js" ></script>
